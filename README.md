@@ -30,4 +30,4 @@ t = str2double(sheet(numStart:end, 6));
 f = str2double(sheet(numStart:end, 7));
 ```
 
-Note that numStart denotes which row to start reading from each column. Names, l, w, d, t, and f, are columns with the indexes 1, 3, 4, 5, and 6, respectively. To change where to start reading and which columns, simply change the values. The variable 'sheet' is a matrix of all entries in the google sheet, it can be truncated in whichever fashion is neccessary.
+Note that numStart denotes which row to start reading from each column. Names, l, w, d, t, and f, are columns with the indexes 1, 3, 4, 5, 6, and 7, respectively. To change where to start reading and which columns, simply change the values. The variable 'sheet' is a matrix of all entries in the google sheet, it can be truncated in whichever fashion is neccessary.
