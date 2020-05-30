@@ -4,6 +4,8 @@ A tool to calculate lossy transmission lines.
 
 *Note that MATLAB R2020 is required for full functionality*
 
+To use, simply run plotPrint.m
+
 ## Before Running
 
 Edit readSheet.m query the relevant google sheet. This will be done by changing the DOCID value in this line
