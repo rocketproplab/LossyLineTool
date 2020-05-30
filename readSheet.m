@@ -1,4 +1,4 @@
-function [l w d t names]=readSheet()
+function [l w d t f names]=readSheet()
 % read from google sheet, adjust for each individual sheet setup
 % For reference: https://docs.google.com/spreadsheets/d/1v_54WAXZj2wyBye62ZFX1V3sIqkmemBQhNdAfD6Ojj4/edit?usp=sharing
 DOCID='1v_54WAXZj2wyBye62ZFX1V3sIqkmemBQhNdAfD6Ojj4'; % google sheet key
@@ -9,4 +9,5 @@ l = str2double(sheet(numStart:end, 3)); % Change column index accordingly
 w = str2double(sheet(numStart:end, 4));
 d = str2double(sheet(numStart:end, 5));
 t = str2double(sheet(numStart:end, 6));
+f = str2double(sheet(numStart:end, 7));
 end

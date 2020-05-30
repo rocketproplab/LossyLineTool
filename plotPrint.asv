@@ -1,11 +1,10 @@
 close all
 %% time period to plot
-% period=1/(1.5*10^(9));
-numOfPCoe=10000;
+period=1/(1.5*10^(9));
+numOfPCoe=1000;
 %% read off sheet
-[l w d t f names] = readSheet();
+[l w d t p names] = readSheet();
 for i=1:size(names)
-    period = 1/f(i);
     printCalc(l(i),w(i),d(i),t(i),char(names(i)),period,numOfPCoe)
 end
 %% calc and save plot function
