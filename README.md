@@ -2,7 +2,7 @@
 
 A tool to calculate lossy transmission lines.
 
-**Note that MATLAB R2020 is required for full functionality**
+*Note that MATLAB R2020 is required for full functionality*
 
 ## Before Running
 
