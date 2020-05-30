@@ -1,6 +1,7 @@
 # Lossy Line Tool
 
 A tool to calculate lossy transmission lines.
+**Note that MATLAB R2020 is required for full functionality**
 
 ## Before Running
 
@@ -25,6 +26,7 @@ l = str2double(sheet(numStart:end, 3)); % Change column index accordingly
 w = str2double(sheet(numStart:end, 4));
 d = str2double(sheet(numStart:end, 5));
 t = str2double(sheet(numStart:end, 6));
+f = str2double(sheet(numStart:end, 7));
 ```
 
-Note that numStart denotes which row to start reading from each column. Names, l, w, d, and t, are columns with the indexes 1, 3, 4, 5, and 6, respectively. To change where to start reading and which columns, simply change the values. The variable sheet is a matrix of all entries in the google sheet, it can be truncated in whichever fashion is neccessary.
+Note that numStart denotes which row to start reading from each column. Names, l, w, d, t, and f, are columns with the indexes 1, 3, 4, 5, and 6, respectively. To change where to start reading and which columns, simply change the values. The variable 'sheet' is a matrix of all entries in the google sheet, it can be truncated in whichever fashion is neccessary.
