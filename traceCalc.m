@@ -16,14 +16,14 @@ widthM=width*2.54*10^(-5); %Width and Length in meters
 % distanceM=distance*2.54*10^(-5);
 lengthM=length*2.54*10^(-5);
 
-%ThicknessofCopperI=ThicknessofCopper*10^(3); %Thickness of trace in inches
-widI=width*10^(3); %Width and Length in inches
-lenI=length*10^(3); % Length of trace
-distI=distance*10^(3); % Distance between trace and ground plane
+%ThicknessofCopperI=ThicknessofCopper*10^(-3); %Thickness of trace in inches
+widI=width*10^(-3); %Width and Length in inches
+lenI=length*10^(-3); % Length of trace
+distI=distance*10^(-3); % Distance between trace and ground plane
 
 %% microstrip approximations
 L = inductanceCalc(lenI,widI,distI); % in uH
-C = capacitanceCalc(lenI,width,distance,ThicknessOfCopper,epsilonR); % pF
+C = capacitanceCalc(lenI,width,distance,ThicknessOfCopper,epsilonR); % uF
 
 %% assuming microstrip line
 %L=distanceM*u0*uR/widthM;
@@ -32,13 +32,11 @@ R=Roh*lengthM/(ThicknessofCopperM*widthM);
 ZoDC=sqrt(L/C);
 
 function L = inductanceCalc(len,wid,dist)
-    % (10^6)* -> to Henry
     L = 0.00508*(log(2*len/(wid+dist)) + 0.5 + 0.2235*(wid+dist)/len); %uH
 end
 
 function C = capacitanceCalc(len,wid,dist,thick,epsilonR)
-    % (10^12)* -> to Farad
-    C = len*0.67*(epsilonR+1.41)/log(5.98*dist/(0.8*wid+thick)); % pF
+    C = (10^6)*len*0.67*(epsilonR+1.41)/log(5.98*dist/(0.8*wid+thick)); % uF
 end
 
 end
